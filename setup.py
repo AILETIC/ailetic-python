@@ -13,5 +13,12 @@ setup(
         "torch",
         "torchvision",
         "urllib3==1.26.6"
-    ]
+    ],
+    entry_points={
+        "console_scripts": [
+            "ailetic=ailetic:main"
+        ]
+    },
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown"
 )

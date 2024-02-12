@@ -58,8 +58,7 @@ def to_grayscale(image_array: np.ndarray) -> np.ndarray:
     """
     return np.mean(image_array, axis=2).astype(np.uint8)
 
-if __name__ == "__main__":
-
+def main():
     server = LocalServer()
 
     server.add_route(
@@ -69,4 +68,11 @@ if __name__ == "__main__":
         methods=["POST"]
     )
     
-    server.run(host="0.0.0.0", port=5001, debug=True)
+    server.run(
+        host="0.0.0.0",
+        port=5001,
+        debug=True
+    )
+
+if __name__ == "__main__":
+    main()
